@@ -801,8 +801,9 @@ main section#seventhsection{
     padding: 150px 0px;
 }
 main section#seventhsection div#left{
-    width: 30%;
+    width: 33%;
     padding-top: 50px;
+    
 }
 main section#seventhsection div#left h2{
     font-size: 80px;
@@ -824,7 +825,7 @@ main section#seventhsection div#left p{
     color: rgb(72, 72,72);
     line-height:34px ;
     padding:30px 0px 50px 0px;
-    width:fit-content;
+  
 }
 main section#seventhsection div#left ul{
     list-style: none;
