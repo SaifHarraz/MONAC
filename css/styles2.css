@@ -6,20 +6,15 @@
     
 }
 :root {
-  --main-bg: #F8C365;
-  --sub1-bg:white;
-  --sub2-bg:rgb(255,246, 229);
-  --sub3-bg:black;
-  --main-text: black;
-  --sub1-text:white;
-  --sub2-text: #F8C365;
+  --main-bg: black;
+  /* --main-text: #F8C365; */
+  --main-text:white;
   --clr-1:white;
-  --clr-2:rgb(112,112, 112);
-  --clr-3:#D8A345;
+  --clr-2: rgb(112,112, 112);
+  --clr-3:#e8b355;
+
 }
-i,h1,h2,h3,h4,li{
-    color: var(--main-text);
-}
+
 a{
     text-decoration: none;
     color: var(--main-text);
@@ -32,17 +27,15 @@ span.block{
 }
 body{
     width: 100%;
-}    
-button{
-    cursor: pointer;
-}    
+    background-color: var(--main-bg);
+    color: var(--main-text);
     
     
-
+    
+}
 header{
    width: 100%;
    background-color:var(--main-bg);
-   
 }
 header nav{
     display: flex;
@@ -84,7 +77,7 @@ header nav ul#acc li{
 header nav ul#acc li a#signup{
     padding:20px 40px ;
     border: 1px solid var(--main-text);
-    color: var(--clr-1);
+    color: var(--main-bg);
     background-color: var(--main-text);
     border-radius: 50px;
 }
@@ -119,7 +112,7 @@ header>nav>div>ul li{
 
 
 #themelist li:hover {
-  background: var(--clr-3);
+  background: var(--clr-2);
 }
 
 header>nav>div>ul li:first-child i#default{
@@ -127,6 +120,7 @@ header>nav>div>ul li:first-child i#default{
 }
 header>nav>div>ul li i.checkmark{
 visibility: hidden;
+
 }
 
 
@@ -146,10 +140,12 @@ header nav  button{
 }
 header nav  button i{
     font-size: 54px;
+    color: var(--main-text);
 }
 header nav  button:active{
     transform: scale(1.2);
 }
+
 #colorschangecontainer{
    position: fixed;
    z-index: 10001;
@@ -170,9 +166,6 @@ header nav  button:active{
     left: -20px;
     
 }
-#colorschangecontainer>button i{
-    color:var(--main-bg);
-}
 #colorschangecontainer #colorsbutton.show{
     display: none;
   
@@ -185,7 +178,7 @@ header nav  button:active{
    background-color:var(--main-bg);
    width:30vw;
    height: 100vh;
-   border:black solid 2px;
+   border:var(--main-text) solid 2px;
     
 }
  #colorschangecontainer ul#colorslist.show{
@@ -206,10 +199,10 @@ header nav  button:active{
 }
 #colorschangecontainer>ul#colorslist>li>ul#colorsheader>li p{
    padding: 5px;
+   color: var(--main-text);
 }
 #colorschangecontainer>ul#colorslist>li>ul#colorsheader>li i{
    align-self: center;
-   cursor: pointer;
    padding: 5px;
    padding-bottom: 0;
    margin-right: 20px;
@@ -251,7 +244,7 @@ header nav  button:active{
     align-self: center;
     font-size: 28px;
     padding-left: 30px;
-    color: var(--clr-1);
+    color: var(--main-bg);
 }
 #colorschangecontainer>ul#colorslist>li>ul#colors li div input{
     cursor: pointer;
@@ -268,9 +261,10 @@ header nav  button:active{
     padding: 20px 10px;
     font-size: 30px;
     background-color:var(--main-text);
-    color: var(--clr-1);
+    color: var(--main-bg);
     margin-left: 20px;
     border-radius: 50px;
+    cursor: pointer;
 }
 header section#firstsection{
     display: flex;
@@ -307,7 +301,7 @@ header section#firstsection h1 span.italic{
 }
 header section#firstsection div#right p{
     font-size: 24px;
-    color: rgb(62, 62, 62);
+    color: var(--clr-2);
     line-height:34px ;
     padding-bottom: 50px;
     
@@ -322,14 +316,13 @@ header section#firstsection div#right a{
 header section#firstsection div#right a i{
 
 }
+
 #secondsection{
     background-color: var(--main-bg);
 }
 
-
 main section#numsection{
     padding: 150px 0;
-    background-color: var(--sub1-bg);
 }
 main section#numsection ul#num{
     display: flex;
@@ -352,7 +345,7 @@ main section#numsection ul#num li p:first-child{
 }
 main section#numsection ul#num li p:nth-child(2){
     font-size: 20px;
-    color: gray;
+    color:gray;
 }
 main section#numsection ul#num li:not(:last-child)::after{
     content: "";
@@ -367,7 +360,7 @@ main section#numsection ul#num li:not(:last-child)::after{
 
 }
 main section#fourthsection{
-    background-color: var(--sub2-bg);
+    background-color:var(--main-bg);
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
@@ -405,7 +398,7 @@ main section#fourthsection div#right h2{
    
 }
 main section#fourthsection div#right h2 span.italic{
-    background-color: var(--main-bg);
+    background-color: var(--main-text);
     font-family: serif;
     font-style: italic;
     font-weight: lighter;
@@ -413,18 +406,17 @@ main section#fourthsection div#right h2 span.italic{
     padding: 0px 25px 0px 25px ;
     border: 2px solid var(--main-text);
     border-radius: 90px;
-    color: var(--main-text);
+    color: var(--main-bg);
 
 }
 main section#fourthsection div#right p{
     font-size: 24px;
-    color: rgb(72, 72,72);
+    color: var(--clr-2);
     line-height:34px ;
     padding:30px 0px 50px 0px;
 }
 main section#fifthsection{
     padding:100px 75px ;
-    background-color: var(--sub1-bg);
 } 
 
     
@@ -443,19 +435,20 @@ main section#fifthsection #container div{
 }  
 main section#fifthsection #container div#larger{
         width: 59%;
-        background-color: var(--main-text);
+        background-color: var(--main-bg);
         border-radius: 30px;
         height: 460px;
         display: flex;
         flex-direction: column;
         padding:70px 0px 20px 100px ;
+        border: 2px solid var(--clr-2);
 
 }
 main section#fifthsection #container div.top{
     margin-bottom: 61px;
 }
 main section#fifthsection #container div#larger h2{
-       color: var(--clr-1);
+       color: var(--main-text);
        font-size: 70px;
       
 }
@@ -464,6 +457,10 @@ main section#fifthsection #container div#larger span.italic{
     font-family: serif; 
     font-style: italic; 
     font-weight: lighter;
+    background-color: var(--main-text);
+    padding: 0px 15px  ;
+    border: 2px solid var(--main-text);
+    border-radius: 50px;
     color:var(--main-bg);
     
 }
@@ -484,7 +481,7 @@ main section#fifthsection #container div.smaller{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        border: 2px solid var(--clr-1);
+        border: 2px solid var(--clr-2);
         border-radius: 30px;
         padding: 20px;
         height: 460px;
@@ -514,27 +511,29 @@ main section#fifthsection #container div.bottom{
 }
 main section#sixthsection{
     width: 100%;
-    background-color: var(--sub3-bg);
+    background-color: var(--main-bg);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 150px 0px;
+    color: var(--main-text);
     
     
 }
 main section#sixthsection h2{
     font-size: 70px;
-    color: var(--sub1-text);
+    color: var(--main-text);
     margin-bottom: 130px;
     text-align: center;
 }
-main section#sixthsection h2 span.italic{
+main section#sixthsection h2 .italic{
     font-family: serif; 
     font-style: italic; 
     font-weight: lighter;
-    color:var(--main-bg);
-    border: 2px solid var(--main-bg); 
     background-color: var(--main-text);
+    color:var(--main-bg);
+    padding: 0 15px;
+    border: 2px solid var(--main-bg); 
     border-radius:90px ;
     margin-left: 15px;
 }
@@ -551,9 +550,9 @@ main section#sixthsection div#projectscontainer .project{
     height: 600px;
     display: flex;
     flex-direction: column;
-    background-color: var(--sub1-bg);
+    background-color: var(--main-bg);
     color: var(--main-text);
-    border:1px solid var(--main-text) ;
+    border:2px solid var(--clr-2) ;
     border-radius: 25px;
     overflow: hidden;
     
@@ -571,6 +570,7 @@ main section#sixthsection div#projectscontainer .project div.top2project{
     flex-direction: row;
     justify-content: space-between;
     padding:0px 30px;
+    color: var(--main-text);
     
 }
 main section#sixthsection div#projectscontainer .project  div.top2project div.top2projectleft{
@@ -580,7 +580,7 @@ main section#sixthsection div#projectscontainer .project  div.top2project div.to
        gap: 5px;
 }
 main section#sixthsection div#projectscontainer .project  div.top2project div.top2projectleft i{
-     color: var(--main-bg);
+     color: var(--main-text);
      
 }
 main section#sixthsection div#projectscontainer .project  div.top2project div.top2projectleft p span{
@@ -605,8 +605,10 @@ main section#sixthsection div#projectscontainer .project  div.bottom2project{
 main section#sixthsection div#projectscontainer .project  div.bottom2project a{
     padding: 15px 30px;
     border-radius: 30px;
-    border: 2px solid var(--main-text); 
+    border: 2px solid var(--clr-2); 
     font-weight: 600;
+    background-color: var(--main-text);
+    color: var(--main-bg);
 }
 #yellow{
     background-color: var(--main-bg);
@@ -1011,7 +1013,6 @@ main section#seventhsection{
     display: flex;
     justify-content: space-around;
     padding: 150px 0px;
-    background-color: var(--sub1-bg);
 }
 main section#seventhsection div#left{
     width: 35%;
@@ -1022,19 +1023,19 @@ main section#seventhsection div#left h2{
     padding-bottom: 20px;
 }
 main section#seventhsection div#left h2 span.italic{
-    background-color: var(--main-bg);
+    background-color: var(--main-text);
     font-family: serif;
     font-style: italic;
     font-weight: lighter;
     margin-left: 15px;
     padding: 0px 25px 0px 25px ;
-    border: 2px solid var(--main-text);
+    border: 2px solid var(--clr-2);
     border-radius: 90px;
-    color: var(--main-text);
+    color: var(--main-bg);
 }
 main section#seventhsection div#left p{
     font-size: 24px;
-    color: rgb(72, 72,72);
+    color: var(--clr-2);
     line-height:34px ;
     padding:30px 0px 50px 0px;
 }
@@ -1046,7 +1047,7 @@ main section#seventhsection div#left ul li{
     padding-bottom: 20px;
 }
 main section#seventhsection div#left ul li i{
-    color: var(--main-bg);
+    color: var(--main-text);
     padding-right: 10px;
 }
 main section#seventhsection div#right{
@@ -1076,7 +1077,7 @@ main section#eighthsection #container div#left h2{
 }
 main section#eighthsection #container div#left p{
     font-size: 24px;
-    color: rgb(72, 72,72);
+    color: var(--clr-2);
     line-height:34px ;
     padding:30px 0px 50px 0px;
 }
@@ -1084,10 +1085,10 @@ main section#eighthsection #container div#left a{
     font-size: 26px;
     font-weight: 600;
     padding: 20px 30px;
-    border: 2px solid var(--main-text) ;
+    border: 2px solid var(--clr-2) ;
     border-radius: 40px;
     background-color: var(--main-text);
-    color: var(--clr-1);
+    color: var(--main-bg);
 }
 main section#eighthsection #container div#right{
     width: 40%;
@@ -1102,7 +1103,6 @@ main section#ninthsection{
     justify-content: space-around;
     align-items: center;
     padding: 150px 0;
-    background-color: var(--sub1-bg);
 }
 main section#ninthsection div#top{
     width: 100%;
@@ -1114,15 +1114,15 @@ main section#ninthsection div#top h2{
     
 }
 main section#ninthsection div#top h2 span.italic{
-    background-color: var(--main-bg);
+    background-color: var(--main-text);
     font-family: serif;
     font-style: italic;
     font-weight: lighter;
     margin-left: 15px;
-    padding: 0px 25px 0px 25px ;
-    border: 2px solid var(--main-text);
+    padding:  0px 15px ;
+    border: 2px solid var(--clr-2);
     border-radius: 90px;
-    color: var(--main-text);
+    color: var(--main-bg);
 }
 main section#ninthsection div#bottom{
     width: 30%;
@@ -1136,11 +1136,11 @@ main section#ninthsection div#bottom a{
     display: flex;
     align-items: flex-end;
     background-color: var(--main-text);
-    color: var(--clr-1);
+    color: var(--main-bg);
     padding: 15px ;
     padding-right: 0;
     margin: 40px 20px;
-    border: 1px solid var(--main-text);
+    border: 1px solid var(--clr-2);
     border-radius: 15px;
     width: 210px;
     text-align: center;
@@ -1148,7 +1148,6 @@ main section#ninthsection div#bottom a{
 }
 main section#ninthsection div#bottom a i{
     font-size: 40px;
-    color: var(--clr-1);
 }
 main section#ninthsection div#bottom a p{ 
    font-size: 22px;
@@ -1160,9 +1159,8 @@ main section#ninthsection div#bottom div#right a p{
     margin-left: 10px;
 }    
 footer{
-    border-top: 2px solid white;
-    background-color:black;
-    color: var(--clr-1);
+    background-color: var(--main-bg);
+    color: var(--main-text);
     padding: 100px 0;
 }
 footer #container{
@@ -1177,7 +1175,7 @@ footer #container div#left{
 footer #container div#left #logo{
     font-size: 32px;
     padding-bottom: 20px;
-    color: white;
+    color: var(--main-text);
 }
 footer #container div#left p{
     font-size: 18px;
@@ -1209,10 +1207,11 @@ footer #container div#right ul li a{
 /* Responsive styles for new sections */
 
  @media screen and (max-width: 1024px) {
+    
     #colorschangecontainer > ul#colorslist {
     width: 40vw;
   }
-  main section#seventhsection {
+    main section#seventhsection {
         flex-direction: column;
         align-items: center;
         padding: 100px 20px;
@@ -1343,7 +1342,7 @@ footer #container div#right ul li a{
     width: 100%;
     justify-content: space-between;
   }
-  main section#seventhsection {
+    main section#seventhsection {
         padding: 80px 20px;
     }
     

@@ -6,11 +6,11 @@
     <title>MONAC</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="webfonts/all.min.css">
-</head>
+</head> 
 <body>
     <header>
       <nav>
-           
+        
         <ul id="pages">
             <li><a href="home.html"  class="active" >Home</a></li>
             <li><a href="blog.html" >Blog</a></li>
@@ -25,9 +25,21 @@
         <ul id="acc">  
             <li><a href="Log in.html">Log In</a></li>
             <li><a href="Sign up.html" id="signup" >Sign Up</a></li>
-        </ul>    
-          
+            
+        </ul>
+
+        <div id="themecontainer">    
+         <button id="themebutton"><i id ="themeicon"class="fa-solid fa-sun"></i></button>
+         <ul id="themelist" >
+            
+            <li id="theme1" theme="light"><i class="fa-solid fa-sun"></i> Default &MediumSpace; <i id="default" class="fa-solid fa-check checkmark "></i></li>
+            <li id="theme2" theme="dark"><i class="fa-solid fa-moon"></i> Dark &MediumSpace;  <i class="fa-solid fa-check checkmark "></i></li>
+         </ul>
+        </div>
+
+        
       </nav>
+      
 
 
       <section id="firstsection">
@@ -45,9 +57,42 @@
       
 
     </header>
+    <div id="colorschangecontainer">
+          <button id="colorsbutton">Customize <i class="fa-solid fa-gear"></i></button>  
+          <ul id="colorslist">
+            <li >
+                <ul id="colorsheader">
+                    <li><p>Customize Colors</p><i id="Xmark" class="fa-solid fa-xmark"></i></li>
+                </ul>
+            </li>
+             
+            <li>
+                <ul id="colors">
+                    <li id="primarycolor"><label for="primary">primary:</label>
+                        <div>
+                            <p id="defaultprimarycolor"></p>
+                            <input type="color" id="mainbg" value="#F8C365" >
+                        </div>
+                    </li>
+                    <li id="secondarycolor">
+                        <label for="secondary">secondary: </label>
+                        <div>
+                            <p id="defaultsecondarycolor"></p>
+                            <input type="color" id="maintext" value="#000000">
+                        </div> 
+                    </li>
+                </ul>
+            </li>
+            <li>
+             <button id="colorsdone">Done</button>
+             <button id="colorsreset">Reset</button>
+            </li>
+             
+          </ul>
+    </div>
     <main>
       <section id="secondsection">
-        <img src="img/section2.webp" alt="sectionimg" width="100%">
+        <img src="img/section2.png" alt="sectionimg" width="100%">
       </section>
 
       <section id="numsection">
@@ -73,7 +118,7 @@
 
       <section id="fourthsection">
           <div id="left">
-             <img src="img/section4.webp" alt="">
+             <img src="img/section4.png" alt="">
           </div>
 
           <div id="right">
@@ -216,7 +261,7 @@
 
       <section id="seventhsection">
         <div id="left">
-            <h2>Its easy to start<span class="italic">Learning</span></h2>
+            <h2>It's easy to start<span class="italic">Learning</span></h2>
             <p><span class="block">Our Sign-In Process Lets You Start Your Learning Journey</span>
                <span class="block">Without Much Hassle. Our Aim Is To Create A Great Learning</span>
                Experience For You.
@@ -290,6 +335,7 @@
             </div>
         </div>
     </footer>
+    <script src="/js/main.js"></script>
 </body>
 </html>
 
