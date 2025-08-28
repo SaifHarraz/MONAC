@@ -13,27 +13,45 @@ var colorsreset=document.getElementById("colorsreset");
 var Xmark=document.getElementById("Xmark");
 var Pdefaultprimarycolor=document.getElementById("defaultprimarycolor") ;
 var Pdefaultsecondarycolor=document.getElementById("defaultsecondarycolor"); 
-
 var mainbg=document.getElementById("mainbg");
 var maintext=document.getElementById("maintext");
 //initial values 
+
+let savedtheme=localStorage.getItem("theme");
+if (savedtheme=="theme1") {
+    theme1F();
+}
+else if (savedtheme=="theme2") {
+    theme2F();
+}
+else {
+   //nothing 
+   ;
+}
+localStorage.getItem("mainbg")?mainbg.value=localStorage.getItem("mainbg"):null;
+localStorage.getItem("maintext")?maintext.value=localStorage.getItem("maintext"):null;
+window.addEventListener("load",function () {
+    changePprimary();
+    changePsecondary();
+})
 Pdefaultprimarycolor.innerHTML=mainbg.value;
 Pdefaultsecondarycolor.innerHTML=maintext.value;
 // update p when change
 function changePprimary() {
-   
     Pdefaultprimarycolor.innerHTML = mainbg.value;
     document.documentElement.style.setProperty("--main-bg",mainbg.value);
     document.documentElement.style.setProperty("--sub1-bg",mainbg.value);
     document.documentElement.style.setProperty("--sub2-bg",mainbg.value);
     document.documentElement.style.setProperty("--sub3-bg",mainbg.value);
     document.documentElement.style.setProperty("--clr-1",mainbg.value);
+    localStorage.setItem("mainbg",mainbg.value);
 }
 function changePsecondary() {
     Pdefaultsecondarycolor.innerHTML = maintext.value;
     document.documentElement.style.setProperty("--main-text",maintext.value);
     document.documentElement.style.setProperty("--sub1-text",maintext.value);
     document.documentElement.style.setProperty("--sub2-text",maintext.value);
+    localStorage.setItem("maintext",maintext.value);
     
 }
 mainbg.addEventListener("input", changePprimary);
@@ -63,6 +81,7 @@ colorsreset.addEventListener("click",function () {
     document.documentElement.style.setProperty("--clr-1","white");
     document.documentElement.style.setProperty("--clr-2","rgb(112,112, 112)");
     document.documentElement.style.setProperty("--clr-3","#D8A345");
+    localStorage.clear();
     theme1F();
 })
 
@@ -74,6 +93,7 @@ function themelistshow() {
      themelist.classList.toggle("show");
 }
 function theme1F() {
+    localStorage.setItem("theme","theme1");
     document.querySelector("[href*=styles]").setAttribute("href","css/styles.css");
     document.documentElement.style.setProperty("--main-bg", "#F8C365"); 
     document.documentElement.style.setProperty("--sub1-bg","white");
@@ -94,12 +114,10 @@ function theme1F() {
     themeicon.className="";
     themeicon.className="fa-solid fa-sun";
     themelist.classList.toggle("show");
-} 
-theme1.addEventListener("click",theme1F);
-theme2.addEventListener("click",function () {
-
+}
+function theme2F() {
+    localStorage.setItem("theme","theme2");
     document.querySelector("[href*=styles]").setAttribute("href","css/styles2.css");
-    
     Pdefaultprimarycolor.innerHTML = "#000000";
     Pdefaultsecondarycolor.innerHTML = "#ffffff";
     mainbg.value="#000000";
@@ -113,4 +131,6 @@ theme2.addEventListener("click",function () {
     themeicon.className="";
     themeicon.className="fa-solid fa-moon";
     themelist.classList.toggle("show");
-})
+} 
+theme1.addEventListener("click",theme1F);
+theme2.addEventListener("click",theme2F);

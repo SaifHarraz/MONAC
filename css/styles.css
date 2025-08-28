@@ -153,7 +153,7 @@ header nav  button:active{
 #colorschangecontainer{
    position: fixed;
    z-index: 10001;
-   height: 100vh;
+   
 }
 
 #colorschangecontainer>button{
@@ -181,7 +181,9 @@ header nav  button:active{
    display: none;
    gap: 40px;
    position: fixed;
-   top: 0;
+   top: 10%;
+   max-height: 80vh;
+   overflow-y: auto;
    background-color:var(--main-bg);
    width:30vw;
    height: 100vh;
