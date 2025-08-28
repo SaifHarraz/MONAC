@@ -93,6 +93,7 @@ function themelistshow() {
      themelist.classList.toggle("show");
 }
 function theme1F() {
+    localStorage.clear();
     localStorage.setItem("theme","theme1");
     document.querySelector("[href*=styles]").setAttribute("href","css/styles.css");
     document.documentElement.style.setProperty("--main-bg", "#F8C365"); 
@@ -116,6 +117,7 @@ function theme1F() {
     themelist.classList.toggle("show");
 }
 function theme2F() {
+    localStorage.clear();
     localStorage.setItem("theme","theme2");
     document.querySelector("[href*=styles]").setAttribute("href","css/styles2.css");
     Pdefaultprimarycolor.innerHTML = "#000000";
